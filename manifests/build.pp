@@ -5,8 +5,6 @@
 # @example
 #   include puppet_simple_website::build
 
-include '::gitclone'
-
 class puppet_simple_website::build {
 
   file {'/home/edureka/Downloads/build_repo':
@@ -14,15 +12,13 @@ class puppet_simple_website::build {
         mode   => '0777'
   }
 
-  gitclone::repo { 'simple-php-website' :
-		source      => 'https://github.com/bhavanashendge/simple-php-website.git',
-		destination => '/home/edureka/Downloads/build_repo',
-		owner       => 'edureka',
-		group       => 'edureka',
+  exec {'git clone':
+      cwd     => '/home/edureka/Downloads',
+      command => '/usr/bin/git clone https://github.com/bhavanashendge/simple-php-website.git /home/edureka/Downloads/build_repo'
   }
 
   exec {'Docker build':
-      cwd     => '/home/edureka/Downloads/build_repo/simple-php-website',
+      cwd     => '/home/edureka/Downloads/build_repo',
       command => '/usr/bin/docker build -t simple-php .'
   }
 
