@@ -7,7 +7,6 @@
 class puppet_simple_website::run {
 
   exec {'Docker run':
-        cwd     => '/home/edureka/Downloads/build_repo/simple-php-website',
         command => '/usr/bin/docker run  -it -d -p 8091:8080 simple-php'
   }
 
