@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "source": "",
   "dependencies": [
-
+    { "name":"puppetlabs/justinjl-gitclone","version_requirement":">= 1.0.0" }
   ],
   "operatingsystem_support": [
     {
