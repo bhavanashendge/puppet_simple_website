@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'simple_website::run' do
+describe 'puppet_simple_website::run' do
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }

@@ -3,11 +3,11 @@
 # @summary A short summary of the purpose of this class
 #
 # @example
-#   include simple_website
-class simple_website {
+#   include puppet_simple_website
+class puppet_simple_website {
 
-    class {'simple_website::inst_docker_git':}
-    class {'simple_website::build':}
-    class {'simple_website::run':}
+    class {'puppet_simple_website::inst_docker_git':}
+    class {'puppet_simple_website::build':}
+    class {'puppet_simple_website::run':}
 
 }

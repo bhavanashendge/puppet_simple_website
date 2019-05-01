@@ -3,11 +3,11 @@
 # @summary A short summary of the purpose of this class
 #
 # @example
-#   include simple_website::build
+#   include puppet_simple_website::build
 
 include '::gitclone'
 
-class simple_website::build {
+class puppet_simple_website::build {
 
   file {'/home/edureka/Downloads/build_repo':
         ensure => 'directory',

@@ -3,8 +3,8 @@
 # @summary A short summary of the purpose of this class
 #
 # @example
-#   include simple_website::inst_docker_git
-class simple_website::inst_docker_git {
+#   include puppet_simple_website::inst_docker_git
+class puppet_simple_website::inst_docker_git {
 
   package {
     'curl': ensure => 'installed'

@@ -3,8 +3,8 @@
 # @summary A short summary of the purpose of this class
 #
 # @example
-#   include simple_website::run
-class simple_website::run {
+#   include puppet_simple_website::run
+class puppet_simple_website::run {
 
   exec {'Docker run':
         cwd     => '/home/edureka/Downloads/build_repo/simple-php-website',
