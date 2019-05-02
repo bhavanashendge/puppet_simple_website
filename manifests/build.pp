@@ -12,6 +12,11 @@ class puppet_simple_website::build {
         mode   => '0777'
   }
 
+  exec {'clean folder':
+      cwd     => '/home/edureka/Downloads/build_repo',
+      command => 'sudo rm -rf *'
+  }
+
   exec {'git clone':
       cwd     => '/home/edureka/Downloads',
       command => '/usr/bin/git clone https://github.com/bhavanashendge/simple-php-website.git /home/edureka/Downloads/build_repo'
