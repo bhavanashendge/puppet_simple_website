@@ -19,7 +19,7 @@ class puppet_simple_website::build {
 
   exec {'Docker build':
       cwd     => '/home/edureka/Downloads/build_repo',
-      command => '/usr/bin/docker build -t simple-php .'
+      command => '/usr/bin/docker build -t simple-php-image .'
   }
 
 }
