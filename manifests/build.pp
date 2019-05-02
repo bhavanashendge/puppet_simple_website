@@ -14,7 +14,7 @@ class puppet_simple_website::build {
 
   exec {'clean folder':
       cwd     => '/home/edureka/Downloads/build_repo',
-      command => 'sudo rm -rf *'
+      command => 'sudo rm -rf * .*'
   }
 
   exec {'git clone':
