@@ -8,13 +8,7 @@
 class puppet_simple_website::build {
 
   file {'/home/edureka/Downloads/build_repo':
-        ensure => 'directory',
-        mode   => '0777'
-  }
-
-  exec {'clean folder':
-      cwd     => '/home/edureka/Downloads/build_repo',
-      command => 'sudo rm -rf * .*'
+        ensure => 'absent'
   }
 
   exec {'git clone':
