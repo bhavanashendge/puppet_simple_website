@@ -8,7 +8,8 @@
 class puppet_simple_website::build {
 
   file {'/home/edureka/Downloads/build_repo':
-        ensure => 'absent'
+        ensure => 'absent',
+        force => 'true'
   }
 
   exec {'git clone':
