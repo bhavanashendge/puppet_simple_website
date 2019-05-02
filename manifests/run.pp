@@ -7,11 +7,11 @@
 class puppet_simple_website::run {
 
   exec {'Docker stop old container if existing':
-        command => '/usr/bin/docker stop simple-php-container'
+        command => '/usr/bin/docker stop simple-php-container | echo "."'
   }
   
   exec {'Docker prune old containers':
-        command => '/usr/bin/docker container rm simple-php-container'
+        command => '/usr/bin/docker container rm simple-php-container | echo "."'
   }
   
 
