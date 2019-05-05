@@ -16,7 +16,7 @@ class puppet_simple_website::run {
   
 
   exec {'Docker run':
-        command => '/usr/bin/docker run  -it -d -p 80:80 --name simple-php-container simple-php-image'
+        command => '/usr/bin/docker run  -it -d -p 80:80 --name simple-php-container simple-php-image | echo "."' 
   }
 
 }
